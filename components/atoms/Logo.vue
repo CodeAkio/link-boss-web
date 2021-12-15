@@ -6,13 +6,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { CBox } from '@chakra-ui/vue'
 
 export default Vue.extend({
   name: 'Logo',
-  components: {
-    CBox,
-  },
 })
 </script>
 
