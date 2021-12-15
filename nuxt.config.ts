@@ -1,9 +1,11 @@
+import customTheme from './custom-theme'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'link_boss_web',
+    title: 'Link Boss',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-BR'
     },
     meta: [
       { charset: 'utf-8' },
@@ -12,7 +14,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap' }
     ]
   },
 
@@ -49,6 +52,10 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
+
+  chakra: {
+    extendTheme: customTheme
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
