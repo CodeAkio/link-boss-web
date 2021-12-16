@@ -1,69 +1,77 @@
-# link_boss_web
+<h1 align="center">
+  <img alt="Link Boss" title="Link Boss" src="https://github.com/CodeAkio/link-boss-web/blob/master/.github/logo.svg" width="300px" />
+</h1>
 
-## Build Setup
+<h3 align="center">
+  Sistema de encurtamento de links (Like a Boss)
+</h3>
 
-```bash
-# install dependencies
-$ yarn install
+<p align="center">
+  <a href="#demonstração">Demonstração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#links">Links</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#utilização">Utilização</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#testes">Testes</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+<br>
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## Demonstração
 
-# generate static project
-$ yarn generate
+<p align="center">
+  <img alt="web" src="https://github.com/CodeAkio/link-boss-web/blob/master/.github/demo.gif" width="100%">
+</p>
+
+## Links
+* [Mapa mental naming](https://mm.tt/map/2121157641?t=CxkaYNsBqh)
+* [Imagens do logo](https://1drv.ms/u/s!AnU6ZyT58iI6g7dAkCBfUnyJ4fOVWQ?e=8RbMqC)
+* [Projeto no Figma](https://www.figma.com/file/nWrm5togzXq3wtSiBFtcwc/LinkBoss?node-id=0%3A1)
+* [Github API](https://www.figma.com/file/nWrm5togzXq3wtSiBFtcwc/LinkBoss?node-id=0%3A1)
+* [Coleção do Insomnia](https://1drv.ms/u/s!AnU6ZyT58iI6g7dQaGke8-FM7an2LQ?e=6yruwI)
+* [Kanban do projeto](https://www.meistertask.com/app/project/ttBqnlg9/linkboss)
+
+## Tecnologias
+
+* [Nuxt.js](https://nuxtjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Yarn](https://yarnpkg.com/)
+* [Jest](https://jestjs.io/pt-BR/)
+* [Faker](https://www.npmjs.com/package/faker)
+* [ESLint](https://eslint.org/)
+* [Prettier](https://prettier.io/)
+* [Axios](https://www.npmjs.com/package/axios)
+* [Font Awesome](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons)
+* [SASS](https://www.npmjs.com/package/sass)
+* [Chakra UI](https://vue.chakra-ui.com/)
+
+## Utilização
+
+1. Faça o passo a passo para levantar a [API](https://github.com/CodeAkio/link-boss-api).
+
+2. Instale o [Node.js](https://nodejs.org/pt-br/download/).
+
+3. Clone o projeto para sua máquina:
+```console
+$ git clone https://github.com/CodeAkio/link-boss-web.git
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+4. Entre na pasta do projeto:
+```console
+$ cd link-boss-web
+```
 
-## Special Directories
+4. Renomeie o .env.example para .env e configure este arquivo:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+5. Instale as dependências:
+```console
+$ npm install
+```
 
-### `assets`
+6. Agora a aplicação está disponível em http://localhost:3000
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## Testes
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+Rode os testes com o seguinte comando:
+```bash
+npm run jest:watch
+```
