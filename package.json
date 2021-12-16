@@ -13,7 +13,7 @@
     "jest:watch": "jest --watchAll"
   },
   "dependencies": {
-    "@chakra-ui/nuxt": "^0.3.3",
+    "@chakra-ui/nuxt": "^0.4.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

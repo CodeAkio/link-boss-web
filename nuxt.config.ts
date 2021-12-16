@@ -54,13 +54,19 @@ export default {
     '@nuxtjs/axios',
   ],
 
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL_WEB || 'http://localhost:3000'
+  },
+
   chakra: {
     icons: customIcons,
     extendTheme: customTheme
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL_API
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
