@@ -1,4 +1,5 @@
 import customTheme from './custom-theme'
+import customIcons from './custom-icons'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -54,6 +55,7 @@ export default {
   ],
 
   chakra: {
+    icons: customIcons,
     extendTheme: customTheme
   },
 
