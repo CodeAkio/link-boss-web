@@ -2,7 +2,7 @@
   <c-button
     class="header-item"
     as="nuxt-link"
-    to="/"
+    :to="to"
     variant-color="primary"
     variant="ghost"
     color="lightGrey.500"
