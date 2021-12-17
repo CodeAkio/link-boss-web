@@ -30,15 +30,12 @@
             @submit.prevent="handleSubmit"
           >
             <c-form-control w="100%">
-              <c-input
+              <InputPrimary
                 v-model="url"
                 type="url"
                 required
                 :autofocus="!shortUrl"
                 placeholder="Link para encurtar"
-                bg="background.500"
-                border-color="lightGrey.500"
-                focus-border-color="primary.500"
                 size="lg"
               />
             </c-form-control>
