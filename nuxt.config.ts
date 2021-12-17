@@ -53,6 +53,7 @@ export default {
     '@nuxtjs/emotion',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
   ],
 
   publicRuntimeConfig: {
