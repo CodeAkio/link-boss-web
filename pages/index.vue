@@ -43,15 +43,9 @@
               />
             </c-form-control>
 
-            <c-button
-              type="submit"
-              variant-color="primary"
-              size="lg"
-              :ml="4"
-              right-icon="link"
-            >
+            <ButtonPrimary type="submit" size="lg" :ml="4" right-icon="link">
               Encurtar
-            </c-button>
+            </ButtonPrimary>
           </c-flex>
 
           <c-flex v-if="shortUrl" :pt="4">

@@ -23,9 +23,7 @@
                 />
               </c-form-control>
 
-              <c-button :mt="6" type="submit" variant-color="primary">
-                Recuperar
-              </c-button>
+              <ButtonPrimary :mt="6" type="submit"> Recuperar </ButtonPrimary>
             </c-box>
           </Card>
         </c-flex>
