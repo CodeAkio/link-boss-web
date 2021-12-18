@@ -39,6 +39,7 @@ import Header from '~/components/organisms/Header.vue'
 export default Vue.extend({
   name: 'ForgotPage',
   components: { Header },
+  middleware: 'guest',
   data() {
     return {
       email: '',

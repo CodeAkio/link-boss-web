@@ -40,10 +40,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import Header from '~/components/organisms/Header.vue'
+import { auth } from '@/store'
 
 export default Vue.extend({
   name: 'SignInPage',
   components: { Header },
+  middleware: 'guest',
   data() {
     return {
       email: '',
@@ -53,7 +55,7 @@ export default Vue.extend({
   methods: {
     async handleSubmit() {
       try {
-        await this.$axios.$post('/sessions', {
+        await auth.create({
           email: this.email,
           password: this.password,
         })
