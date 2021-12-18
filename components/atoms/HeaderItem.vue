@@ -1,13 +1,13 @@
 <template>
   <c-button
     class="header-item"
-    as="nuxt-link"
-    :to="to"
     variant-color="primary"
     variant="ghost"
     color="lightGrey.500"
     :_active="{ color: 'white' }"
     :left-icon="icon"
+    v-bind="[$props, $attrs]"
+    v-on="$listeners"
   >
     {{ text }}
   </c-button>
@@ -24,10 +24,6 @@ export default Vue.extend({
       required: true,
     },
     icon: {
-      type: String,
-      required: true,
-    },
-    to: {
       type: String,
       required: true,
     },
