@@ -4,7 +4,12 @@
       <CColorModeProvider>
         <CBox font-family="body" as="main">
           <CReset />
-          <Nuxt />
+          <Container>
+            <c-flex w="100vw" h="100vh" flex-dir="column">
+              <Header />
+              <Nuxt />
+            </c-flex>
+          </Container>
         </CBox>
       </CColorModeProvider>
     </CThemeProvider>

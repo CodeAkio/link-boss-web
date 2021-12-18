@@ -1,87 +1,80 @@
 <template>
-  <c-box class="container">
-    <c-flex w="100vw" h="100vh" bg="background.500" flex-dir="column">
-      <Header />
-      <ContentCentered>
-        <c-flex w="100%" :max-width="600" direction="column">
-          <c-flex
-            class="header-container"
-            w="100%"
-            text-align="center"
-            justify="center"
-            align="center"
-          >
-            <c-heading class="home-title">
-              Encurte seu link
-              <c-text as="span" color="primary.500">Like a Boss</c-text>
-            </c-heading>
+  <ContentCentered>
+    <c-flex w="100%" :max-width="600" direction="column">
+      <c-flex
+        class="header-container"
+        w="100%"
+        text-align="center"
+        justify="center"
+        align="center"
+      >
+        <c-heading class="home-title">
+          Encurte seu link
+          <c-text as="span" color="primary.500">Like a Boss</c-text>
+        </c-heading>
 
-            <img
-              class="home-title-icon"
-              src="@/assets/img/cool.png"
-              alt="Emoticon com óculos de sol"
+        <img
+          class="home-title-icon"
+          src="@/assets/img/cool.png"
+          alt="Emoticon com óculos de sol"
+        />
+      </c-flex>
+
+      <c-flex
+        as="form"
+        class="home-short-link-form"
+        :pt="8"
+        @submit.prevent="handleSubmit"
+      >
+        <c-form-control w="100%">
+          <InputPrimary
+            v-model="url"
+            type="url"
+            required
+            :autofocus="!shortUrl"
+            placeholder="Link para encurtar"
+            size="lg"
+          />
+        </c-form-control>
+
+        <ButtonPrimary type="submit" size="lg" :ml="4" right-icon="link">
+          Encurtar
+        </ButtonPrimary>
+      </c-flex>
+
+      <c-flex v-if="shortUrl" :pt="4">
+        <c-input-group size="lg" w="100%">
+          <c-input
+            v-model="shortUrl"
+            type="url"
+            :autofocus="shortUrl"
+            is-read-only
+            bg="background.500"
+            border-color="success.500"
+            focus-border-color="success.500"
+            size="lg"
+          />
+
+          <c-input-right-element>
+            <c-icon-button
+              variant-color="success"
+              aria-label="Copiar link"
+              size="sm"
+              icon="clone"
+              @click="copyToClipboard"
             />
-          </c-flex>
-
-          <c-flex
-            as="form"
-            class="home-short-link-form"
-            :pt="8"
-            @submit.prevent="handleSubmit"
-          >
-            <c-form-control w="100%">
-              <InputPrimary
-                v-model="url"
-                type="url"
-                required
-                :autofocus="!shortUrl"
-                placeholder="Link para encurtar"
-                size="lg"
-              />
-            </c-form-control>
-
-            <ButtonPrimary type="submit" size="lg" :ml="4" right-icon="link">
-              Encurtar
-            </ButtonPrimary>
-          </c-flex>
-
-          <c-flex v-if="shortUrl" :pt="4">
-            <c-input-group size="lg" w="100%">
-              <c-input
-                v-model="shortUrl"
-                type="url"
-                :autofocus="shortUrl"
-                is-read-only
-                bg="background.500"
-                border-color="success.500"
-                focus-border-color="success.500"
-                size="lg"
-              />
-
-              <c-input-right-element>
-                <c-icon-button
-                  variant-color="success"
-                  aria-label="Copiar link"
-                  size="sm"
-                  icon="clone"
-                  @click="copyToClipboard"
-                />
-              </c-input-right-element>
-            </c-input-group>
-          </c-flex>
-        </c-flex>
-      </ContentCentered>
+          </c-input-right-element>
+        </c-input-group>
+      </c-flex>
     </c-flex>
-  </c-box>
+  </ContentCentered>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Header from '~/components/organisms/Header.vue'
 
 export default Vue.extend({
   name: 'App',
-  components: { Header },
   data() {
     return {
       url: '',
