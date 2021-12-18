@@ -5,7 +5,7 @@
     </c-box>
 
     <c-box>
-      <HeaderItem text="Top" icon="fire" as="nuxt-link" to="/" />
+      <HeaderItem text="Top" icon="fire" as="nuxt-link" to="/top" />
     </c-box>
 
     <c-box v-if="!isAuth">

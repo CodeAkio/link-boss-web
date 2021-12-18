@@ -1,4 +1,4 @@
-import { faHome, faFire, faSignInAlt, faLink, faClone, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faFire, faSignInAlt, faLink, faClone, faSignOutAlt, faEye } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   iconPack: 'fa',
@@ -9,5 +9,6 @@ export default {
     faSignOutAlt,
     faLink,
     faClone,
+    faEye,
   }
 }
